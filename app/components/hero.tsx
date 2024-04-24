@@ -1,66 +1,31 @@
-import React, { useRef } from "react";
-import { Stepper } from "primereact/stepper/stepper";
-import { StepperPanel } from "primereact/stepperpanel/stepperpanel";
-import { Button } from "primereact/button/button";
-
-export default function BasicDemo() {
-  const stepperRef = useRef(null);
-
+export default function Hero() {
   return (
-    <div className="card flex justify-content-center">
-      <Stepper ref={stepperRef} style={{ flexBasis: "50rem" }}>
-        <StepperPanel header="Header I">
-          <div className="flex flex-column h-12rem">
-            <div className="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
-            </div>
-          </div>
-          <div className="flex pt-4 justify-content-end">
-            <Button
-              label="Next"
-              icon="pi pi-arrow-right"
-              iconPos="right"
-              onClick={() => stepperRef.current.nextCallback()}
-            />
-          </div>
-        </StepperPanel>
-        <StepperPanel header="Header II">
-          <div className="flex flex-column h-12rem">
-            <div className="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content II
-            </div>
-          </div>
-          <div className="flex pt-4 justify-content-between">
-            <Button
-              label="Back"
-              severity="secondary"
-              icon="pi pi-arrow-left"
-              onClick={() => stepperRef.current.prevCallback()}
-            />
-            <Button
-              label="Next"
-              icon="pi pi-arrow-right"
-              iconPos="right"
-              onClick={() => stepperRef.current.nextCallback()}
-            />
-          </div>
-        </StepperPanel>
-        <StepperPanel header="Header III">
-          <div className="flex flex-column h-12rem">
-            <div className="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
-            </div>
-          </div>
-          <div className="flex pt-4 justify-content-start">
-            <Button
-              label="Back"
-              severity="secondary"
-              icon="pi pi-arrow-left"
-              onClick={() => stepperRef.current.prevCallback()}
-            />
-          </div>
-        </StepperPanel>
-      </Stepper>
-    </div>
+    <>
+      <section className="h-screen grid place-items-center px-4">
+        <h1 className="uppercase text-center leading-[1]">
+          <span
+            style={{
+              textShadow: `0.05em 0 0 #000, -0.03em -0.04em 0 #fff , 0.025em 0.04em 0 #fff`,
+            }}
+            className="text-transparent text-8xl font-bold tracking-tight"
+          >
+            markdown
+          </span>
+          <br></br>
+          <span
+            style={{
+              textShadow: `0.05em 0 0 #fff, -0.03em -0.04em 0 #DD1D38 , 0.025em 0.04em 0 #00E1DB`,
+            }}
+            className="font-extrabold text-[9rem] tracking-wider"
+          >
+            copilot ai
+          </span>
+          <br></br>
+          <span style={{
+            textShadow:`-4px 4px 0 #fff , 4px 4px 0 #fff, 4px -4px 0 #fff, -4px -4px 0 #fff`
+          }} className="text-9xl text-transparent tracking-tight font-bold">post</span>
+        </h1>
+      </section>
+    </>
   );
 }

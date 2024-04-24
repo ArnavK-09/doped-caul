@@ -1,10 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
-import { Button } from 'primereact/button';
 
-import "primereact/resources/themes/lara-dark-blue/theme.css";
-
-import { PrimeReactProvider } from 'primereact/api';
-import BasicDemo from "~/components/hero";
+import HeroSection from "~/components/hero";
         
         
 
@@ -17,8 +13,6 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <PrimeReactProvider>
-        <BasicDemo />
-    </PrimeReactProvider>
+    <HeroSection />
   );
 }

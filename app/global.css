@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Skoda";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Skoda Medium"), local("Skoda-Medium"),
+    url("/fonts/SkodaPro.woff2") format("woff2"),
+    url("/fonts/SkodaPro.woff") format("woff"),
+    url("/fonts/SkodaPro.ttf") format("truetype");
+  font-style: normal;
+}
+
+html {
+  backdrop-filter: brightness(0.1);
+  background-repeat: repeat !important;
+  background: url("https://www.toptal.com/designers/subtlepatterns/uploads/twinkle_twinkle.png");
+}
