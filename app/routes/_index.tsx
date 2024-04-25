@@ -1,6 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 
-import HeroSection from "~/components/hero";
+import HeroSection from "~/components/Hero";
         
         
 

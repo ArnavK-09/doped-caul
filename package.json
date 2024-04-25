@@ -11,6 +11,8 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@copilotkit/react-core": "^0.24.0",
+    "@copilotkit/react-textarea": "^0.34.0",
     "@remix-run/node": "^2.9.0",
     "@remix-run/react": "^2.9.0",
     "@remix-run/serve": "^2.9.0",

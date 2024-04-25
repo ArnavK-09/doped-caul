@@ -1,16 +1,13 @@
-@font-face {
-  font-family: "Skoda";
-  font-style: normal;
-  font-weight: 500;
-  src: local("Skoda Medium"), local("Skoda-Medium"),
-    url("/fonts/SkodaPro.woff2") format("woff2"),
-    url("/fonts/SkodaPro.woff") format("woff"),
-    url("/fonts/SkodaPro.ttf") format("truetype");
+html {
+  backdrop-filter: brightness(0) contrast(2);
+  background-repeat: repeat;
+  background: url("https://www.toptal.com/designers/subtlepatterns/uploads/twinkle_twinkle.png");
+  font-family: "Krona One" !important;
+  font-weight: 400;
   font-style: normal;
 }
 
-html {
-  backdrop-filter: brightness(0.1);
-  background-repeat: repeat !important;
-  background: url("https://www.toptal.com/designers/subtlepatterns/uploads/twinkle_twinkle.png");
+
+.glitch_text {
+  text-shadow: 0.05em 0 0 #fff, -0.03em -0.04em 0 #DD1D38 , 0.025em 0.04em 0 #00E1DB !important;
 }
