@@ -4,7 +4,7 @@ import { useGo, useShow } from "@refinedev/core";
 import { useState } from "react";
 import LoadingPage from "../components/Loading";
 
-const ToggleForPreview = ({ onChange }: { onChange: (e: Event) => void }) => {
+export const ToggleForPreview = ({ onChange }: { onChange: (e: Event) => void }) => {
   return (
     <label
       htmlFor="MarkdownPreviewToggle"
@@ -88,7 +88,7 @@ export default function EditPost() {
           />
         </section>
       ) : (
-        <section className="bg-black shadow shadow-gray-5 min-h-[60vh] text-left rounded-xl focus:outline-none outline-none py-5 px-4">
+        <section className="preview_md">
           preview
         </section>
       )}
