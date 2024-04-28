@@ -82,15 +82,15 @@ function App() {
                 <Route index element={<HomePage />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route
-                element={<h1>API</h1>}
-                  path="/api/:id"
+                  element={<h1>API</h1>}
+                  path="/api/"
                   loader={async ({ params }) => {
-                    return (params);
+                    return params;
                   }}
                   action={async ({ request }) => {
                     switch (request.method) {
                       case "PUT": {
-                        return {hi:true};
+                        return { hi: true };
                       }
                       default: {
                         throw new Response("", { status: 405 });

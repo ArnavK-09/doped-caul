@@ -1,7 +1,8 @@
 html {
   backdrop-filter: brightness(0) contrast(2);
   background-repeat: repeat;
-  background: url("https://www.toptal.com/designers/subtlepatterns/uploads/twinkle_twinkle.png");
+  background: url("/bg.webp");
+  background-color: #000000;
   font-family: "Krona One" !important;
   font-weight: 400;
   font-style: normal;

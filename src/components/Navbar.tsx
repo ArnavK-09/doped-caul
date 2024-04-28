@@ -12,10 +12,8 @@ export default function Navbar() {
       <div>
         <NavLink
           aria-label="home"
-          to="/"
-          className="hover:scale-105 block bg-gradient-to-br from-primary to-primary/80 transition-all ease-in-out shadow-md shadow-primary px-5 py-2 font-bold tracking-wide uppercase"
-        >
-          Logo
+          to="/" >
+          <img src="/logo.svg" className="hover:scale-105 w-11 h-11 transition-all ease-in-out" alt="logo"/>
         </NavLink>
       </div>
       <div>
