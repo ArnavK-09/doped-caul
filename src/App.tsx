@@ -26,11 +26,17 @@ import LoadingPage from "./components/Loading";
 export const SupabaseProviderContext = createContext<{
   currentUser: any;
   loading: boolean;
+  showError: (msg: string) => void;
   setLoading?: Dispatch<SetStateAction<boolean>>;
-}>({ currentUser: null, loading: false });
+}>({
+  currentUser: null,
+  loading: false,
+  showError: (msg: string) => console.error(msg),
+});
 export const SupabaseProvider = ({ children }: { children: ReactNode }) => {
   const [currentUser, setCurrentUser] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   useEffect(() => {
     (async () => {
       const user = await supabase.auth.getUser();
@@ -38,14 +44,24 @@ export const SupabaseProvider = ({ children }: { children: ReactNode }) => {
     })();
   }, []);
 
+  const showError = (msg: string) => {
+    setErrorMessage(msg ?? "Error");
+    setTimeout(() => setErrorMessage(null), 1000);
+  };
+
   return (
     <SupabaseProviderContext.Provider
-      value={{ currentUser, setLoading, loading }}
+      value={{ currentUser, setLoading, loading, showError }}
     >
       {children}
       {loading && (
         <div className="absolute top-0 left-0 z-1000 bg-black/60 fixed h-full backdrop-blur-sm grid place-items-center overflow-x-hidden">
           <LoadingPage message="Processing your request..." />
+        </div>
+      )}
+      {errorMessage !== null && (
+        <div className="absolute top-0 left-0 z-1000 bg-black/60 fixed h-full backdrop-blur-sm grid place-items-center overflow-x-hidden">
+          <LoadingPage message={errorMessage} />
         </div>
       )}
     </SupabaseProviderContext.Provider>
@@ -75,29 +91,12 @@ function App() {
           },
         ]}
       >
-        <CopilotKit url="/api">
+        <CopilotKit url="/api/copilot">
           <SupabaseProvider>
             <Layout>
               <Routes>
                 <Route index element={<HomePage />} />
                 <Route path="/dashboard" element={<Dashboard />} />
-                <Route
-                  element={<h1>API</h1>}
-                  path="/api/"
-                  loader={async ({ params }) => {
-                    return params;
-                  }}
-                  action={async ({ request }) => {
-                    switch (request.method) {
-                      case "PUT": {
-                        return { hi: true };
-                      }
-                      default: {
-                        throw new Response("", { status: 405 });
-                      }
-                    }
-                  }}
-                />
                 <Route path="/dashboard/post/new" element={<NewPost />} />
                 <Route path="/dashboard/post/:id/edit" element={<EditPost />} />
                 <Route

@@ -24,7 +24,7 @@ export default function Dashboard() {
     <Authenticated
       key="dashboard"
       fallback={<NoAuthPage />}
-      loading={<LoadingPage />}
+      loading={<LoadingPage message="Checking credentials..." />}
     >
       <PageSection title="Dashboard">
         <div className="mt-5 mb-14 grid place-items-center w-full">

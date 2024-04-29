@@ -20,8 +20,8 @@ export default function PublishPost() {
             required
           />
           <label
-            for="opt"
-            className="select-none inline-flex items-center justify-between w-full p-5 text-gray-500 bg-black/50 border-2 peer-checked:border-black border-primary rounded-xl cursor-pointer hover:bg-black/80  peer-checked:bg-primary/60 hover:text-gray-600  peer-checked:text-gray-600"
+            htmlFor="opt"
+            className="select-none inline-flex items-center justify-between w-full p-5 text-gray-500 bg-black/50 border-2 border-primary rounded-xl cursor-pointer hover:bg-black/80  peer-checked:border-4 peer-checked:border-primary hover:text-gray-600  peer-checked:text-gray-600 peer-chcecked:[label>img]:!border-4 peer-unchecked:[&,img]:!border-4"
           >
             <div className="px-4 gap-4 break-words overflow-x-hidden grid md:grid-cols-3 grid-cols-1 w-full">
               <div className="col-span-1">

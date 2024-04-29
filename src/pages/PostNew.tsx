@@ -13,7 +13,7 @@ export default function NewPost() {
   const [userTypedContent, setUserTypedContent] = useState("# Hello, World!");
   const [newPostTitle, setnewPostTitle] = useState("Post newone");
   const [activeTab, setActiveTab] = useState<"EDIT" | "SHOW">("EDIT");
-  const { setLoading } = useContext(SupabaseProviderContext);
+  const { setLoading, showError } = useContext(SupabaseProviderContext);
 
   const generatePostTitleTask = new CopilotTask({
     instructions: `Generate an attractive, crisp and precise title for the post content written below to maximize user's click rate! Just give title in single line and nothing. Post Content.:-\n${userTypedContent}`,
@@ -60,7 +60,12 @@ export default function NewPost() {
           published_to: [],
         })
         .select("*");
-      console.log(12222, data, error);
+      if (error) {
+        showError(error.message);
+      }
+      if (data) {
+        console.log("post saved");
+      }
     } catch (e) {
       console.log("error", e);
     } finally {
@@ -106,7 +111,9 @@ export default function NewPost() {
             <CopilotTextarea
               className="bg-gray/5 min-h-[60vh] text-left rounded-xl focus:outline-none outline-none text-sm py-5 px-4"
               value={userTypedContent}
-              onValueChange={(value: string) => setUserTypedContent(value)}
+              onValueChange={(value: string) =>
+                setUserTypedContent(value.trim())
+              }
               placeholder="Get started writing your content powered by AI..."
               autosuggestionsConfig={{
                 textareaPurpose: "markdown editor",

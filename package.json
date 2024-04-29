@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@copilotkit/backend": "^0.8.0",
     "@copilotkit/react-core": "^0.24.0",
     "@copilotkit/react-textarea": "^0.34.0",
     "@refinedev/cli": "^2.16.21",
@@ -15,7 +16,8 @@
     "@refinedev/supabase": "^5.7.8",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-router-dom": "^6.8.1"
+    "react-router-dom": "^6.8.1",
+    "vite-plugin-api-routes": "^1.1.10"
   },
   "devDependencies": {
     "@types/node": "^18.16.2",
@@ -27,6 +29,7 @@
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
+    "openai": "^4.38.5",
     "typescript": "^4.7.4",
     "unocss": "^0.59.4",
     "vite": "^4.3.1"
