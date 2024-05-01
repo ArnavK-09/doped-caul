@@ -78,7 +78,7 @@ export default function EditPost() {
   }, [userTypedContent]);
 
   const SaveThisPost = async () => {
-    console.log("hi")
+    console.log("hi");
     setLoading!(true);
     try {
       // const { data, error } = await supabase
@@ -143,7 +143,12 @@ export default function EditPost() {
             Save This Post
           </button>
           <button
-            onClick={() => window.location.href =  window.location.href.replace("edit", "publish")}
+            onClick={() =>
+              (window.location.href = window.location.href.replace(
+                "edit",
+                "publish"
+              ))
+            }
             className="primary_btn w-[60%] block mx-auto my-10"
           >
             Publish This Post

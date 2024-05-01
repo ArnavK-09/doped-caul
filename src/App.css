@@ -8,19 +8,20 @@ html {
   font-style: normal;
 }
 
-html ,body {
+html,
+body {
   overflow-x: hidden !important;
 }
 
-
 .glitch_text {
-  text-shadow: 0.05em 0 0 #fff, -0.03em -0.04em 0 #DD1D38 , 0.025em 0.04em 0 #00E1DB !important;
+  text-shadow: 0.05em 0 0 #fff, -0.03em -0.04em 0 #dd1d38,
+    0.025em 0.04em 0 #00e1db !important;
 }
 
 .primary_btn {
-  @apply hover:scale-105 block bg-gradient-to-br from-primary to-primary/80 transition-all ease-in-out shadow-md shadow-primary px-5 py-2 font-bold tracking-wide uppercase
+  @apply hover:scale-105 block bg-gradient-to-br from-primary to-primary/80 transition-all ease-in-out shadow-md shadow-primary px-5 py-2 font-bold tracking-wide uppercase;
 }
 
 .preview_md {
-  @apply bg-black select-none shadow-sm shadow-gray-5 min-h-[60vh] text-left rounded-xl focus:outline-none outline-none py-5 px-4
+  @apply bg-black select-none shadow-sm shadow-gray-5 min-h-[60vh] text-left rounded-xl focus:outline-none outline-none py-5 px-4;
 }

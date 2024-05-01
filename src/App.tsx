@@ -91,7 +91,7 @@ function App() {
           },
         ]}
       >
-        <CopilotKit url="/api/copilot">
+        <CopilotKit url="https://6969-arnavk09-post-4nxaq7973mi.ws-us110.gitpod.io/">
           <SupabaseProvider>
             <Layout>
               <Routes>

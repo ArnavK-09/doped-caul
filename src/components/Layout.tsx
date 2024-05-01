@@ -6,7 +6,6 @@ import Navbar from "./Navbar";
 import "virtual:uno.css";
 import "@unocss/reset/tailwind.css";
 
-
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <main className="text-gray-100 overflow-x-hidden">

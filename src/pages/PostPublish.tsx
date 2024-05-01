@@ -33,9 +33,14 @@ export default function PublishPost() {
                 />
               </div>
               <div className="col-span-2 h-full w-full grid place-items-center">
-                <h2 style={{
-                    mixBlendMode:"difference"
-                }} className="font-bold tracking-wide text-2xl md:text-3xl text-primary">Dev.to</h2>
+                <h2
+                  style={{
+                    mixBlendMode: "difference",
+                  }}
+                  className="font-bold tracking-wide text-2xl md:text-3xl text-primary"
+                >
+                  Dev.to
+                </h2>
               </div>
             </div>
           </label>
