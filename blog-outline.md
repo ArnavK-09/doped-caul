@@ -34,6 +34,11 @@ i really have 0 knowledge about color scheme so i choose tiktok color scheme sug
 
 i always wanted to give a try to [refine](https://refine.dev) but never got a chance. but today i created finally and i really love their ecosystem! its really and awesome and makes developmen faster by provided all sources for auth, db...etc!
 
+
+# prompt 
+
+I just randomly wrote inefficient prompt for llm but you can change prompt with your choice in ` src/utilities/prompt.ts`
+
 ## react??? huh
 
 i was really forced to use react because i chose refine frame work and have to use [copilot kit](https//copilotkit.ai) as it was base for the quest challenge! otherwise i really dont use react and im bad in it!
