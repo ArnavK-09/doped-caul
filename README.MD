@@ -17,7 +17,7 @@
 
 | ![dev.to](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8j7kvp660rqzt99zui8e.png) |
 |------------|
-| <a align="center" href="https://dev.to/arnavk-09/unlock-your-writing-potential-with-copilotkits-ai-powered-wizardry-30bb"> <strong> 💀 React on my dev.to article written on this project! 💀 </strong> </a> |
+| <a align="center" href="https://dev.to/arnavk-09/unlock-your-writing-potential-with-copilotkits-ai-powered-wizardry-30bb"> <strong> 💀 React on my dev.to article written on this project or no cookie! 💀 </strong> </a> |
 
 </p>
 
