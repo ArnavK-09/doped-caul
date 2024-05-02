@@ -1,51 +1,38 @@
-# intro
+# 🚀 Introducing "Doped Caul" - AI-Powered Writing Platform for Technical Writers 🖋️
 
-## why?
+## 💡 Why?
 
-i created this project just for the sake of particpating in quest, and why im writing this article? just because for the sake of partipation nothing else! but surely this article woould be well written.
+I created this project to participate in the [Quest](https://quine.sh/user/ArnavK-09) challenge, but more importantly, to provide a seamless writing experience for technical writers like yourself. This article aims to showcase the power of AI in enhancing your writing process and delivering high-quality content effortlessly.
 
-## what am building?
+## 🔨 What's Being Built?
 
-i built a platform where techinical writers can write their post efficiently with the help of ai, which can help to automaticcaly enhance and complete your article. you can also publish your article directly from platform without any hassle. een the ui is soo good and fully safe and secure environment just with github oauth login.
+"Doped Caul" is a cutting-edge platform that combines the expertise of human writers with the capabilities of artificial intelligence. It allows technical writers to create and publish their articles efficiently, with the help of an AI assistant that can automatically enhance and complete your work. The platform boasts a user-friendly interface, a safe and secure environment with GitHub OAuth login, and a streamlined publishing process, eliminating the hassle of managing multiple platforms.
 
-# how it works?
+## 🧠 How Does It Work?
 
-basically my frontend created using react, refine, copilotkit/react etc.. sends request to backend (initiated by `<CopilotTextarea />), the backend streams ai (here gpt-3.5 by openai) which is then appended to user's blog / post with their on will. the copilotkit keeps care to also send all context for app, beautiful prompt and other things to get out best results! all this makes this app powerfull which provides content according to needs!
+At the heart of "Doped Caul" lies a powerful frontend built with React, Refine, CopilotKit/React, and other modern technologies. When you start typing in the `<CopilotTextarea />` component, it sends a request to the backend, which initiates a stream of AI-generated content using GPT-3.5 by OpenAI. This content is then seamlessly appended to your blog post or article, based on your preferences. The CopilotKit takes care of providing the necessary context, crafting beautiful prompts, and ensuring optimal results.
 
 ```scala
 Post Context -> CopilotTextarea -> Backend -> Stream Response -> Shown on Frontend -> Accepted by Writer
 ```
 
-# starting up project
+## ✨ Getting Started
 
-## name
+### 🔖 Name
 
-i know name is super wierd "doped-caul", welll well it doesnt really matches project aim but i was unable to find name so this name is suggested by my discord friends (rohan and komsenapati). thanks lol!
+Admittedly, the name "Doped Caul" might seem a bit peculiar at first, but it was a suggestion from my Discord friends (Rohan and Komsenapati), and I decided to embrace the quirky vibe. After all, a unique name can help us stand out in the crowded tech world! 😄
 
-## ui
+### 🎨 UI and Color Scheme
 
-well i chose unocss because tero (creator of nuejs) article convicned me to use unocss instead of unocss , i really followed him blindly, and i love it. unocss is much comfortable and would use for future projects.
+For the user interface, I chose [UnoCSS](https://unocss.dev), inspired by Tero (the creator of NueJS) and his compelling article on the benefits of using UnoCSS over traditional CSS frameworks. As for the color scheme, I opted for a vibrant palette inspired by TikTok, following the recommendations from [this article](https://designshack.net/articles/trends/best-website-color-schemes/). The combination of modern UI and eye-catching colors aims to create an engaging and visually appealing experience for our users.
 
-## color scheme
+### 🛠️ Framework and Dependencies
 
-i really have 0 knowledge about color scheme so i choose tiktok color scheme suggested by and [article](https://designshack.net/articles/trends/best-website-color-schemes/) thanks!
+- I've always wanted to explore [Refine](https://refine.dev), a powerful framework that streamlines development by providing seamless authentication, database integration, and other essential features. This project was the perfect opportunity to dive into Refine's ecosystem, which has proven to be truly awesome and time-saving.
 
-## framework
+- To integrate AI capabilities, I relied on [CopilotKit](https://copilotkit.ai), a requirement for the Quest challenge. While I was initially forced to use React due to the choice of Refine and CopilotKit, I've grown to appreciate its strengths despite my initial unfamiliarity with the framework.
 
-i always wanted to give a try to [refine](https://refine.dev) but never got a chance. but today i created finally and i really love their ecosystem! its really and awesome and makes developmen faster by provided all sources for auth, db...etc!
-
-
-# prompt 
-
-I just randomly wrote inefficient prompt for llm but you can change prompt with your choice in ` src/utilities/prompt.ts`
-
-## react??? huh
-
-i was really forced to use react because i chose refine frame work and have to use [copilot kit](https//copilotkit.ai) as it was base for the quest challenge! otherwise i really dont use react and im bad in it!
-
-# backend
-
-i really created just a simple api with express.js for providing interface to contact with openai with api key! i initialyy choose `@copilotkit/backend` but it isnt working well so i just use this snippet of code to stream responses
+- For the backend, I created a simple API with Express.js to interface with the OpenAI API. Initially, I tried using `@copilotkit/backend`, but due to some compatibility issues, I opted for a more straightforward approach:
 
 ```typescript
 app.post("/", async (req, res) => {
@@ -62,37 +49,37 @@ app.post("/", async (req, res) => {
 });
 ```
 
-since copilotkit sends post request with all data to gather response you have to add post req in your backend!
+> Since CopilotKit sends a POST request with all the necessary data to gather the AI response, you'll need to add a corresponding POST request handler in your backend.
 
-# main app (Frontend)
+### 📝 Main App (Frontend)
 
-## ui
+#### 🎯 UI and Styling
 
-i just created whole damn ui by myself no external components just for fully customization using tiktok color scheme! i hope you would like it!
-instead of being using black bg i used a pattern from a site that really adds some beauty to site.
+I designed the entire UI myself, without relying on external components, to ensure full customization and alignment with the TikTok-inspired color scheme. Instead of a plain black background, I incorporated a subtle pattern from a website, adding an extra touch of beauty to the site.
 
-## font
+#### 🔤 Font Selection
 
-i just found randomly and started using. initialyy the font i was trying to use was not good for ux, but im sure that present font is nice
+After some exploration, I settled on a font that strikes a balance between aesthetics and user experience. While my initial choice wasn't optimal for UX, the current font should provide a pleasant reading experience for our users.
 
-## coding stuff
+#### 💻 Coding Stuff
 
-### auth/db
+##### 🔒 Authentication and Database
 
-i use supabase auth with github provider, which really was so cool. i created `post` table with some fields for saving users data. and refine.dev's supabase provider was cherry on cake which really saved lots of time configuring db and auth by providing valuable helpers
+"Doped Caul" utilizes [Supabase](https://supabase.com) for authentication, with a [GitHub](https://github.com) provider for a seamless login experience. I created a `post` table in the database to store user's post content related data.
 
-### copilot kit
+Refine.dev's [Supabase provider](https://refine.dev/docs/data/packages/supabase/ made it incredibly easy to configure the database and authentication, saving me a lot of time and effort.
 
-i integrated copilot kit by taking guidance from their demo projects and little bit of docs. their react-supported packages really helped me to successfully conenct by frontend to backend and mae the best use of ai models! thanks
+##### 🧠 CopilotKit Integration
 
-### how posts publish?
+I integrated CopilotKit by following their demo projects and documentation. Their React-supported [packages](https://docs.copilotkit.ai/getting-started/quickstart-textarea) greatly facilitated the connection between the frontend and backend, enabling the best use of AI models.
 
-currently we can use dev.to, medium.com, hashnode.com etc... provides their api to publish article
-all api keys are safe and done on client side(idk why but yes). our db doesnt store any of yours api key used for publishing! i used platform's api to publish ai written articles powered by copilotkit!
+##### 🚀 Publishing Posts
 
-### markdown
+Currently, users can publish their AI-written articles directly to platforms like `dev.to, medium.com, and hashnode.com`, which provide APIs for publishing content. All API keys are securely handled on the client-side, ensuring that our database never stores any sensitive information. I utilized these platforms' APIs to streamline the publishing process for AI-generated content powered by CopilotKit.
 
-i used [marked](https://www.npmjs.com/package/marked) package and react memo to convert ai-written article from markdown to html for preview in real time
+##### 📝 Markdown Rendering
+
+To convert the AI-written articles from markdown to HTML for real-time preview, I used the [marked](https://www.npmjs.com/package/marked) package in conjunction with React's `useMemo` hook for optimal performance:
 
 ```typescript
 const userTextConvertedToMarkdown = useMemo(() => {
@@ -100,18 +87,20 @@ const userTextConvertedToMarkdown = useMemo(() => {
 }, [userTypedContent]);
 ```
 
-### variables
+Also I used Unocss's [Typography](https://unocss.dev/presets/typography) plugin to preview markdown content beautifully without writing any extra css.
 
-currently this app requires some env variables to work nicely, so you have to add it to make working,
+##### 🔑 Environment Variables
+
+To ensure smooth operation, "Doped Caul" requires a few environment variables:
 
 ```bash
 VITE_SECRET="<your secret word(s) to encode secret data>"
 VITE_SUPABASE_URL="<your supabase project url>"
-VITE_SUPABASE_KEY="<your supabase project key?"
+VITE_SUPABASE_KEY="<your supabase project key>"
 OPENAI_KEY="<your openai api key>"
 ```
 
-beside this you have to also configure your frontend origin in backend to stop freaking cors erros:
+Additionally, you'll need to configure your frontend origin in the backend to prevent CORS errors:
 
 ```typescript
 app.use(function (req, res, next) {
@@ -124,30 +113,39 @@ app.use(function (req, res, next) {
 });
 ```
 
-and also provide your backend url to copilotkit provider to communicate, you can use `runtimeUrl` since `url` is depreciated in new copilotkit's version!
+Finally, provide your backend URL to the CopilotKit provider to establish communication:
 
 ```html
 <CopilotKit
-  url="https://6969-arnavk09-post-4nxaq7973mi.ws-us112.gitpod.io/"
-  runtimeUrl="https://6969-arnavk09-post-4nxaq7973mi.ws-us112.gitpod.io/"
+  url="<your copilot backend url>"
+  runtimeUrl="<your copilot backend url>"
 >
   ....
 </CopilotKit>
 ```
 
-### dependencies
+> `url` field is depreciated in newer versions of copilotkit!
 
-im using latest versions of dependencies for copilot kit as previos versions giving errors
+##### 📦 Dependencies
+
+I'm using the latest versions of the dependencies for CopilotKit, as previous versions were causing issues:
 
 ```json
 "@copilotkit/react-core": "^0.25.0",
 "@copilotkit/react-textarea": "^0.35.0",
 ```
 
-# conclusion
+# 💝 End of this post
 
-thanks if you read! this was my first try to write article just for the sake of quest, tho i know its not written nicely and lot's of things are missing. this quest really took a time and my other projects were pause so i decided to not to give much time anymore (10 days done already), and now i completed project, it might have some bugs, but would surely fix in future.
-i would really appreciate if you star and give vote to my repo/project and also react to this post!
-thanks everybody! it might not be a good project but i tried hard and gave it all
+Thank you for taking the time to read this article! While this was my first attempt at writing for the Quest challenge, I recognize that there may be room for improvement. However, I've put in my best efforts to create a project that showcases the power of AI in enhancing the writing experience for technical writers.
 
-# links
+- I would greatly appreciate if you could star and vote for my repo/project, as well as react to this post. Your support means a lot and will motivate me to continue improving and delivering even better solutions in the future.
+
+_Remember, "Doped Caul" may not be perfect, but it's a testament to my dedication and hard work (10 days of focused effort!). I'm excited to continue refining this project and addressing any bugs or issues that may arise._
+
+**Thank you, everyone, for your interest and support! 🙌**
+
+# 🔗 Links
+
+
+todo
