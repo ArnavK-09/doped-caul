@@ -8,6 +8,14 @@ i created this project just for the sake of particpating in quest, and why im wr
 
 i built a platform where techinical writers can write their post efficiently with the help of ai, which can help to automaticcaly enhance and complete your article. you can also publish your article directly from platform without any hassle. een the ui is soo good and fully safe and secure environment just with github oauth login.
 
+# how it works?
+
+basically my frontend created using react, refine, copilotkit/react etc.. sends request to backend (initiated by `<CopilotTextarea />), the backend streams ai (here gpt-3.5 by openai) which is then appended to user's blog / post with their on will. the copilotkit keeps care to also send all context for app, beautiful prompt and other things to get out best results! all this makes this app powerfull which provides content according to needs!
+
+```scala
+Post Context -> CopilotTextarea -> Backend -> Stream Response -> Shown on Frontend -> Accepted by Writer
+```
+
 # starting up project
 
 ## name
