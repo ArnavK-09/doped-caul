@@ -6,8 +6,8 @@ import { Authenticated, useGo, useShow } from "@refinedev/core";
 import { useContext, useEffect, useMemo, useState } from "react";
 import LoadingPage from "../components/Loading";
 import NoAuthPage from "../components/NoAuth";
-import { NavLink } from "react-router-dom";
 import { SupabaseProviderContext } from "../App";
+import { marked } from "marked";
 import supabase from "../utility/supabase";
 
 export const ToggleForPreview = ({
@@ -74,20 +74,25 @@ export default function EditPost() {
   }, [data, go, isLoading]);
 
   const userTextConvertedToMarkdown = useMemo(() => {
-    return userTypedContent;
+    return marked(userTypedContent);
   }, [userTypedContent]);
 
   const SaveThisPost = async () => {
     console.log("hi");
     setLoading!(true);
     try {
-      // const { data, error } = await supabase
-      //   .from("posts")
-      //   .update({
-      //     content: userTypedContent
-      //   })
-      //   .select("*");
-      // console.log(12222, data, error);
+      console.log(data?.data.id, userTypedContent);
+      const { data: res, error } = await supabase
+        .from("posts")
+        .update({
+          content: userTypedContent,
+        })
+        .eq("id", data?.data.id)
+        .select("*");
+      console.log(res, error);
+      go({
+        to: "/dashboard",
+      });
     } catch (e) {
       console.log("error", e);
     } finally {
@@ -131,9 +136,12 @@ export default function EditPost() {
             />
           </section>
         ) : (
-          <section className="preview_md">
-            {userTextConvertedToMarkdown.trim()}
-          </section>
+          <section
+            dangerouslySetInnerHTML={{
+              __html: userTextConvertedToMarkdown,
+            }}
+            className="preview_md presetTypography"
+          ></section>
         )}
         <div>
           <button

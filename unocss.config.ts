@@ -2,9 +2,10 @@
 import { defineConfig } from "unocss";
 import { presetUno } from "unocss";
 import transformerDirectives from "@unocss/transformer-directives";
+import { presetTypography } from "unocss";
 
 export default defineConfig({
-  presets: [presetUno()],
+  presets: [presetUno(), presetTypography()],
   transformers: [transformerDirectives()],
   theme: {
     colors: {

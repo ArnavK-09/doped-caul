@@ -18,7 +18,7 @@ server.use(express.json());
 server.use(function (req, res, next) {
   res.header(
     "Access-Control-Allow-Origin",
-    "https://5173-arnavk09-post-4nxaq7973mi.ws-us110.gitpod.io/"
+    "https://5173-arnavk09-post-4nxaq7973mi.ws-us112.gitpod.io/"
   );
   res.header(
     "Access-Control-Allow-Headers",
@@ -54,7 +54,8 @@ server.get("/", (_, res) => {
 server.post("/", async (req, res) => {
   const stream = openai.beta.chat.completions.stream({
     model: "gpt-3.5-turbo",
-    ...req.body,
+    temperature: 0.5,
+    messages: req.body.messages,
   });
   res.header("Content-Type", "text/plain");
   for await (const chunk of stream.toReadableStream()) {

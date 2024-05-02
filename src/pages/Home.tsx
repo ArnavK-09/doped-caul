@@ -41,7 +41,10 @@ export default function HomePage() {
       <Secion title="Damn the Features!">
         <div className="grid px-4 gap-x-7 gap-y-10 md:px-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-18">
           {[...FEATURES].map((X) => (
-            <div className="select-none cursor-pointer hover:rotate-[2deg] hover:scale-102 hover:brightness-125 ease-in-out transition-all rounded-3xl bg-gradient-to-br from-neutral-9/60 to-black/40 hover:to-neutral-9/40 hover:from-black/40 p-5 sm:p-6 lg:p-8 relative overflow-hidden">
+            <div
+              key={X.title}
+              className="select-none cursor-pointer hover:rotate-[2deg] hover:scale-102 hover:brightness-125 ease-in-out transition-all rounded-3xl bg-gradient-to-br from-neutral-9/60 to-black/40 hover:to-neutral-9/40 hover:from-black/40 p-5 sm:p-6 lg:p-8 relative overflow-hidden"
+            >
               <span className="absolute w-40 aspect-square -top-16 -left-16 bg-gradient-to-br from-secondary/60 to-secondary group-hover:to-secondary/60 group-hover:from-secondary rounded-full"></span>
               <div className="my-6 space-y-3 relative grid place-items-center w-full h-full">
                 <div className="block m-auto">
