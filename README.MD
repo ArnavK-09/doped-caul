@@ -4,7 +4,7 @@
 <p align="center">
 <h2 align="center">Markdown -> AI -> Publish</h2>
 <br />
-<img alt="cover" src="https://fav.farm/🖋️" height="100%" width="100%" />
+<img alt="cover" src="https://fav.farm/🖋️" height="40%" width="40%" />
 </p>
 
 > [!NOTE]
