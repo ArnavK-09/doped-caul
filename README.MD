@@ -13,37 +13,46 @@
 
 ---
 
-## 📋 Features
+## ✨ Features
 
-- 🕰️ **Uptime Monitoring**: Track the uptime of your website and receive alerts
-  for any downtime.
-- 📊 **Metrics Visualization**: Analyze your website's performance with
-  interactive charts and data visualizations.
-- 📢 **Incident Reporting**: Publish updates and communicate with your users
-  about any incidents or maintenance.
-- 🔒 **Secure and Self-Hostable**: Fully open-source and customizable, with the
-  option to self-host the dashboard.
-- 🥟 **Desktop UI/UX**: Completely desktop friendly and customizable website design,
-  with support for tailwind css.
+- **AI-Powered Writing Assistant** 🧠: Leverage the power of AI to enhance and streamline your writing process. Get real-time suggestions and assistance from advanced language models.
 
-## 🛠️ Tech Stack
+- **Seamless Integration with Popular Platforms** 🌐: Publish your AI-written articles directly to platforms like dev.to, Medium, and Hashnode with just a few clicks. No more hassle of managing multiple platforms.
 
-> Tila Dashboard is built using the following powerful technologies:
+- **Secure and User-Friendly Interface** 🔒💻: Enjoy a safe and secure environment with GitHub OAuth login. The intuitive UI ensures a smooth writing experience for technical writers.
 
-- 🦕 [Deno](https://deno.land/) - A modern, secure, and fast runtime for
-  JavaScript and TypeScript.
-- 🔥 [Lume](https://lume.land/) - A Deno-powered powerfull static site
-  generator.
-- 🌙 [Lume CMS](https://lume.land/cms) - Great content management tool that supports GitHub versioning also as well as local
-- 🧠 [Nunjucks](https://mozilla.github.io/nunjucks/) - A powerful templating
-  engine for JavaScript.
-- 🎨 [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework
-  for rapid UI development.
-- 🕸️ [Browserless](https://www.browserless.io/) - A cloud-based service for
-  running headless Chrome and Puppeteer.
-- 📊 [Chart.js](https://www.chartjs.org/) - A popular JavaScript library for
-  creating beautiful data visualizations.
+- **Customizable Prompts** 🎨: Tailor the AI prompts to your specific needs, ensuring that the generated content aligns with your writing style and preferences.
 
+- **Markdown Support** 📝: Write in Markdown format and get a live preview of your content rendered in HTML, making it easy to visualize the final output.
+
+- **Real-Time Collaboration** 🤝: Invite your team members or co-authors to collaborate on articles in real-time, streamlining the writing and editing process.
+
+- **Version Control** 📁: Track changes and revert to previous versions of your articles, ensuring you never lose your work.
+
+- **Responsive Design** 📱💻: Access and write from anywhere, with a mobile-friendly interface that adapts to various screen sizes.
+
+- **Robust Backend** 🛠️: Built with Express.js and powered by OpenAI's GPT-3.5 model, ensuring reliable and high-quality AI-generated content.
+
+## 💻 Tech Stack
+
+**Frontend:**
+- React
+- Refine (React-based framework)
+- UnoCSS (Utility-first CSS framework)
+- CopilotKit (AI integration)
+
+**Backend:**
+- Node.js
+- Express.js
+- OpenAI API (GPT-3.5 model)
+
+**Authentication and Database:**
+- Supabase (Authentication and Database solution)
+
+**Other Libraries and Tools:**
+- marked (Markdown to HTML converter)
+- React Memo (Performance optimization)
+- GitHub OAuth (Secure authentication)
 
 ## 🖼️ Screenshots
 
@@ -51,24 +60,37 @@
 
 
 
-| Website Monitor [Online] |
+| Landing Page  |
 |------------|
-| ![Demo](screenshots/online.png) |
+| ![Demo](screenshots/home.jpeg) |
 
 
-| Website Monitor [Offline] |
+| Dashboard  |
 |------------|
-| ![Demo](screenshots/offline.png) |
+| ![Demo](screenshots/dashboard.jpeg) |
 
 
-| Managing Incidents [CMS] |
+| New Post |
 |------------|
-| ![Demo](screenshots/incident.png) |
+| ![Demo](screenshots/newPost.jpeg) |
 
 
-| Content Management System |
+| Edit Post |
 |------------|
-| ![Demo](screenshots/cms.png) |
+| ![Demo](screenshots/editPost.jpeg) |
+
+
+| Publish Post |
+|------------|
+| ![Demo](screenshots/publish.jpeg) |
+
+| Markdown Editor |
+|------------|
+| ![Demo](screenshots/markdown.jpeg) |
+
+| Supabase `posts` table fields |
+|------------|
+| ![Demo](screenshots/supabase.jpeg) |
 
 
 ---
