@@ -60,9 +60,9 @@
 - React Memo (Performance optimization)
 - GitHub OAuth (Secure authentication)
 
-## 🖼️ Screenshots
+## 📷 Screenshots
 
-> Here's a working and expected screenshot of Tila dashboard
+> Here's a working and expected screenshot of dope caul
 
 
 
