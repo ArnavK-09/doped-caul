@@ -9,6 +9,8 @@ import NoAuthPage from "../components/NoAuth";
 import { SupabaseProviderContext } from "../App";
 import { marked } from "marked";
 import supabase from "../utility/supabase";
+import { useMakeCopilotReadable } from "@copilotkit/react-core";
+import prompt from "../utility/prompt";
 
 export const ToggleForPreview = ({
   onChange,
@@ -52,6 +54,8 @@ export default function EditPost() {
       setActiveTab("EDIT");
     }
   };
+
+  useMakeCopilotReadable(prompt);
 
   const result = useShow();
   const go = useGo();
@@ -140,7 +144,7 @@ export default function EditPost() {
             dangerouslySetInnerHTML={{
               __html: userTextConvertedToMarkdown,
             }}
-            className="preview_md presetTypography"
+            className="preview_md text-base prose prose-white xl:text-xl"
           ></section>
         )}
         <div>

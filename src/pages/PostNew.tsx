@@ -1,3 +1,6 @@
+"use client";
+
+import { marked } from "marked";
 import Section from "../components/Section";
 import { CopilotTextarea } from "@copilotkit/react-textarea";
 import { Authenticated } from "@refinedev/core";
@@ -7,7 +10,12 @@ import { ToggleForPreview } from "./PostEdit";
 import NoAuthPage from "../components/NoAuth";
 import { SupabaseProviderContext } from "../App";
 import supabase from "../utility/supabase";
-import { CopilotTask, useCopilotContext } from "@copilotkit/react-core";
+import {
+  CopilotTask,
+  useCopilotContext,
+  useMakeCopilotReadable,
+} from "@copilotkit/react-core";
+import prompt from "../utility/prompt";
 
 export default function NewPost() {
   const [userTypedContent, setUserTypedContent] = useState("# Hello, World!");
@@ -28,6 +36,7 @@ export default function NewPost() {
   });
 
   const context = useCopilotContext();
+  useMakeCopilotReadable(prompt);
 
   const switchTab = (e: Event) => {
     const toggleSwitch = e.target as HTMLInputElement;
@@ -74,7 +83,7 @@ export default function NewPost() {
   };
 
   const userTextConvertedToMarkdown = useMemo(() => {
-    return userTypedContent;
+    return marked(userTypedContent);
   }, [userTypedContent]);
 
   return (
@@ -129,9 +138,12 @@ export default function NewPost() {
             />
           </section>
         ) : (
-          <section className="preview_md">
-            {userTextConvertedToMarkdown}
-          </section>
+          <section
+            dangerouslySetInnerHTML={{
+              __html: userTextConvertedToMarkdown,
+            }}
+            className="preview_md text-base prose prose-white xl:text-xl"
+          ></section>
         )}
 
         <div>
