@@ -18,6 +18,8 @@ At the heart of "Doped Caul" lies a powerful frontend built with React, Refine, 
 Post Context -> CopilotTextarea -> Backend -> Stream Response -> Shown on Frontend -> Accepted by Writer
 ```
 
+{% cta https://github.com/ArnavK-09/doped-caul %} ⛅ Checkout full all preview on GitHub readme ⛅ {% endcta %}
+
 ---
 
 ## ✨ <u>Getting Started</u>
