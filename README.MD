@@ -168,7 +168,7 @@ app.use(function (req, res, next) {
 
 
 <p align="center">
-💫 **If you find this project interesting, please consider giving it a on GitHub to show your support!** 💫
+💫 <strong>If you find this project interesting, please consider giving it a on GitHub to show your support!</strong> 💫
 </p.
 
 --- 
