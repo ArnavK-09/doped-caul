@@ -70,7 +70,7 @@ After some exploration, I settled on a font that strikes a balance between aesth
 <u> </u>
 ### 🔒 Authentication and Database
 
-"Doped Caul" utilizes [Supabase](https://supabase.com) for authentication, with a [GitHub](https://github.com) provider for a seamless login experience. I created a `post` table in the database to store user's post content related data.
+"Doped Caul" utilizes [Supabase](https://supabase.com) for authentication, with a [GitHub](https://github.com) provider for a seamless login experience. I created a `posts` table (fields required mentioned in GitHub repo's README.md) in the database to store user's post content related data.
 
 Refine.dev's [Supabase provider](https://refine.dev/docs/data/packages/supabase/ made it incredibly easy to configure the database and authentication, saving me a lot of time and effort.
 
