@@ -1,6 +1,6 @@
 # 🚀 Introducing "Doped Caul" - AI-Powered Writing Platform for Technical Writers 🖋️
 
-## 💡 Why?
+## 💡 Why this?
 
 I created this project to participate in the [Quest](https://quine.sh/user/ArnavK-09) challenge, but more importantly, to provide a seamless writing experience for technical writers like yourself. This article aims to showcase the power of AI in enhancing your writing process and delivering high-quality content effortlessly.
 
@@ -18,7 +18,7 @@ Post Context -> CopilotTextarea -> Backend -> Stream Response -> Shown on Fronte
 
 ## ✨ Getting Started
 
-### 🔖 Name
+### 🔖 Wierd Name
 
 Admittedly, the name "Doped Caul" might seem a bit peculiar at first, but it was a suggestion from my Discord friends (Rohan and Komsenapati), and I decided to embrace the quirky vibe. After all, a unique name can help us stand out in the crowded tech world! 😄
 
@@ -51,7 +51,7 @@ app.post("/", async (req, res) => {
 
 > Since CopilotKit sends a POST request with all the necessary data to gather the AI response, you'll need to add a corresponding POST request handler in your backend.
 
-### 📝 Main App (Frontend)
+### 📝 Creation of App
 
 #### 🎯 UI and Styling
 
@@ -61,7 +61,7 @@ I designed the entire UI myself, without relying on external components, to ensu
 
 After some exploration, I settled on a font that strikes a balance between aesthetics and user experience. While my initial choice wasn't optimal for UX, the current font should provide a pleasant reading experience for our users.
 
-#### 💻 Coding Stuff
+#### 💻 Base Logic Stuff
 
 ##### 🔒 Authentication and Database
 
@@ -139,13 +139,13 @@ I'm using the latest versions of the dependencies for CopilotKit, as previous ve
 
 Thank you for taking the time to read this article! While this was my first attempt at writing for the Quest challenge, I recognize that there may be room for improvement. However, I've put in my best efforts to create a project that showcases the power of AI in enhancing the writing experience for technical writers.
 
-- I would greatly appreciate if you could star and vote for my repo/project, as well as react to this post. Your support means a lot and will motivate me to continue improving and delivering even better solutions in the future.
+- 🌟 I would greatly appreciate if you could star and vote for my repo/project, as well as react to this post. Your support means a lot and will motivate me to continue improving and delivering even better solutions in the future 🌟
 
 _Remember, "Doped Caul" may not be perfect, but it's a testament to my dedication and hard work (10 days of focused effort!). I'm excited to continue refining this project and addressing any bugs or issues that may arise._
 
-**Thank you, everyone, for your interest and support! 🙌**
+**🙌 Thank you, everyone, for your interest and support! 🙌**
 
-# 🔗 Links
+# 🔗 Links of this project 
 
 
 todo
