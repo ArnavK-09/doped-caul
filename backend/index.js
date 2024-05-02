@@ -16,10 +16,7 @@ export const server = express();
  */
 server.use(express.json());
 server.use(function (req, res, next) {
-  res.header(
-    "Access-Control-Allow-Origin",
-    "https://5173-arnavk09-post-4nxaq7973mi.ws-us112.gitpod.io/"
-  );
+  res.header("Access-Control-Allow-Origin", "<your app url>");
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
