@@ -166,10 +166,9 @@ app.use(function (req, res, next) {
 
 ---
 
-## 🌟 Support the Project
 
-
-<p align="center><strong>👋 We hope Tila Dashboard helps you effortlessly monitor and
-manage your website's uptime, metrics, and incident history. Happy coding! </strong></p>
+<p align="center">
+💫 **If you find this project interesting, please consider giving it a on GitHub to show your support!** 💫
+</p.
 
 --- 
