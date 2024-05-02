@@ -15,9 +15,11 @@
 
 <p align="center">
 <a href="todo">
+
 | ![dev.to](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8j7kvp660rqzt99zui8e.png) |
 |------------|
 | 💀 React on my dev.to article written on this project! |
+
 </a>
 </p>
 
