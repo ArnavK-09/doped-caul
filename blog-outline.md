@@ -1,3 +1,7 @@
+# 🖋️ Unlock Your Writing Potential with CopilotKit's AI-Powered Wizardry!
+
+---
+
 ## 💡 Why this?
 <u> </u>
 I created this project to participate in the [Quest](https://github.com/ArnavK-09) challenge, but more importantly, to provide a seamless writing experience for technical writers like yourself. This article aims to showcase the power of AI in enhancing your writing process and delivering high-quality content effortlessly.
